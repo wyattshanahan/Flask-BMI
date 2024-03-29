@@ -38,9 +38,12 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
-    - name: Coveralls GitHub Action
+    -name: generate report
+    run: |
+      coverage run -m pytest
+      coverage xml -o coverage.xml
+    - name: Coveralls Generate Report
       uses: coverallsapp/github-action@v2.2.3
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        coveralls --service=github
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        path-to-lcov: coverage.xml
