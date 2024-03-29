@@ -31,8 +31,11 @@ def calculator():
             BMI = round(BMI,2)
             return '''
                 <html>
-                    <body>
-                        <p>Your BMI is: {BMI}</p>
+                    <body id="main">
+                        <h1 style="font-family:Avantgarde,TeX Gyre Adventor,URW Gothic L,sans-serif;left:30%;position:absolute;display:inline-block;color:#f4a529;text-align:center;background-image:linear-gradient(to left,#186118,#3eb489,#186118);border-radius:25px;font-style: oblique;"> ⠀⠀ BMI Calculator ⠀⠀ </h1>
+                        <p> ⠀⠀  </p>
+                        <p>  ⠀⠀ </p>
+                        <h2>Your BMI is: <b>{BMI}</b></h2>
                         <p> Your BMI category is: {category}</p>
                         <p><a href=".">Click here to calculate again</a>
                     </body>
@@ -40,9 +43,12 @@ def calculator():
             '''.format(BMI=BMI, category=category)
     return '''
     <html>
-        <body>
+        <body id="main">
             {errors}
-            <p>Enter your height and weight below:</p>
+            <h1 style="font-family:Avantgarde,TeX Gyre Adventor,URW Gothic L,sans-serif;left:30%;position:absolute;display:inline-block;color:#f4a529;text-align:center;background-image:linear-gradient(to left,#186118,#3eb489,#186118);border-radius:25px;font-style: oblique;"> ⠀⠀ BMI Calculator ⠀⠀ </h1>
+            <p> ⠀⠀  </p>
+            <p>  ⠀⠀ </p>
+            <p>Enter your height in Feet/Inches and your weight in Pounds:</p>
             <form method="post" action=".">
                 <p><b>Height:</b></p>
                 <p><input name="heightFt" type="number" min="0" size="6" step=".01"/> Feet</p>
