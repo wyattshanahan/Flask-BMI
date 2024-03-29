@@ -30,29 +30,38 @@ def calculator():
             BMI, category = processHost(weight, heightFt, heightIn)
             BMI = round(BMI,2)
             return '''
-                <html>
-                    <body id="main">
-                        <h1 style="font-family:Avantgarde,TeX Gyre Adventor,URW Gothic L,sans-serif;left:30%;position:absolute;display:inline-block;color:#f4a529;text-align:center;background-image:linear-gradient(to left,#186118,#3eb489,#186118);border-radius:25px;font-style: oblique;"> ⠀⠀ BMI Calculator ⠀⠀ </h1>
-                        <p> ⠀⠀  </p>
-                        <p>  ⠀⠀ </p>
-                        <h2>Your BMI is: <b>{BMI}</b></h2>
-                        <p> Your BMI category is: {category}</p>
-                        <p><a href=".">Click here to calculate again</a>
-                    </body>
+            <html lang="en">
+            <head>
+            <meta name="viewport" content="width=device-width">
+            <meta name="author" content="Wyatt Shanahan">
+            </head>
+            <body>
+        <h1 style="font-family:Avantgarde,TeX Gyre Adventor,URW Gothic L,sans-serif;left:30%;position:absolute;display:inline-block;color:#f4a529;text-align:center;background-image:linear-gradient(to left,#186118,#3eb489,#186118);border-radius:25px;font-style: oblique;"> ⠀⠀ BMI Calculator ⠀⠀ </h1>
+                <section id="output" style="left:33%;position:absolute;font-family:Avantgarde,TeX Gyre Adventor,URW Gothic L,sans-serif">
+                <p>  ⠀⠀ </p>
+                <h3>Your BMI is: <b>{BMI}</b></h3>
+                <p> Your BMI category is: {category}</p>
+                <p><a href=".">Click here to calculate again</a>
+                </section>
+                </body>
                 </html>
             '''.format(BMI=BMI, category=category)
     return '''
-    <html>
+    <html lang="en">
+        <head>
+            <meta name="viewport" content="width=device-width">
+            <meta name="author" content="Wyatt Shanahan">
+        </head>
         <body id="main">
             {errors}
-            <h1 style="font-family:Avantgarde,TeX Gyre Adventor,URW Gothic L,sans-serif;left:30%;position:absolute;display:inline-block;color:#f4a529;text-align:center;background-image:linear-gradient(to left,#186118,#3eb489,#186118);border-radius:25px;font-style: oblique;"> ⠀⠀ BMI Calculator ⠀⠀ </h1>
+        <h1 style="font-family:Avantgarde,TeX Gyre Adventor,URW Gothic L,sans-serif;left:30%;position:absolute;display:inline-block;color:#f4a529;text-align:center;background-image:linear-gradient(to left,#186118,#3eb489,#186118);border-radius:25px;font-style: oblique;"> ⠀⠀ BMI Calculator ⠀⠀ </h1>
             <p> ⠀⠀  </p>
             <p>  ⠀⠀ </p>
             <p>Enter your height in Feet/Inches and your weight in Pounds:</p>
             <form method="post" action=".">
                 <p><b>Height:</b></p>
                 <p><input name="heightFt" type="number" min="0" size="6" step=".01"/> Feet</p>
-                <p><input name="heightIn" type="number" size="6" step=".01"/> Inches</p>
+                <p><input name="heightIn" type="number" min="0" max="11" size="6" step=".01"/> Inches</p>
                 <p></p>
                 <p><b>Weight:</b></p>
                 <p><input name="weight" type="number" min="0" size="6" step=".01"/> Pounds</p>
