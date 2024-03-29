@@ -1,5 +1,5 @@
 import pytest
-from functions import * #import functions from calculator.py
+from calculator import * #import functions from calculator.py
 #unit tests for processRawHeight
 def test_processRawHeight_comma():
     assert processRawHeight("12","6") == 150.0
