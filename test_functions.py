@@ -165,4 +165,4 @@ def test_calculateBMI_invalid_invalid():
     assert str(exc_info.value) == "Error converting your inputs"
 
 def test_processHost():
-    assert processHost(200,5,6,) == 33.05785123966941, "Obese"
+    assert processHost(200,5,6,) == (33.05785123966941, "Obese")
