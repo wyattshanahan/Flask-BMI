@@ -42,14 +42,14 @@ def calculator():
     <html>
         <body>
             {errors}
-            <p>Enter your height in Feet/Inches and your weight in Pounds:</p>
+            <p>Enter your height and weight below:</p>
             <form method="post" action=".">
                 <p><b>Height:</b></p>
-                <p><input name="heightFt" type="number" min="0" size="6"/> Feet</p>
-                <p><input name="heightIn" type="number" size="6"/> Inches</p>
+                <p><input name="heightFt" type="number" min="0" size="6" step=".01"/> Feet</p>
+                <p><input name="heightIn" type="number" size="6" step=".01"/> Inches</p>
                 <p></p>
                 <p><b>Weight:</b></p>
-                <p><input name="weight" type="number" min="0" size="6"/> Pounds</p>
+                <p><input name="weight" type="number" min="0" size="6" step=".01"/> Pounds</p>
                 <p><input type="submit" value="Calculate!" /></p>
             </form>
         </body>
