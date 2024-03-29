@@ -35,13 +35,13 @@ def calculator():
             <meta name="viewport" content="width=device-width">
             <meta name="author" content="Wyatt Shanahan">
             </head>
-            <body>
+            <body style="background-color:#323232;color:#f4a529">
         <h1 style="font-family:Avantgarde,TeX Gyre Adventor,URW Gothic L,sans-serif;left:30%;position:absolute;display:inline-block;color:#f4a529;text-align:center;background-image:linear-gradient(to left,#186118,#3eb489,#186118);border-radius:25px;font-style: oblique;"> ⠀⠀ BMI Calculator ⠀⠀ </h1>
                 <section id="output" style="left:33%;position:absolute;font-family:Avantgarde,TeX Gyre Adventor,URW Gothic L,sans-serif">
                 <p>  ⠀⠀ </p>
                 <h3>Your BMI is: <b>{BMI}</b></h3>
                 <p> Your BMI category is: {category}</p>
-                <p><a href=".">Click here to calculate again</a>
+                <p><a style="color:lime" href=".">Click here to calculate again</a>
                 </section>
                 </body>
                 </html>
@@ -52,21 +52,22 @@ def calculator():
             <meta name="viewport" content="width=device-width">
             <meta name="author" content="Wyatt Shanahan">
         </head>
-        <body id="main">
+        <body style="background-color:#323232;color:#f4a529">
             {errors}
         <h1 style="font-family:Avantgarde,TeX Gyre Adventor,URW Gothic L,sans-serif;left:30%;position:absolute;display:inline-block;color:#f4a529;text-align:center;background-image:linear-gradient(to left,#186118,#3eb489,#186118);border-radius:25px;font-style: oblique;"> ⠀⠀ BMI Calculator ⠀⠀ </h1>
+            <section id="input" style="left:33%;position:absolute;font-family:Avantgarde,TeX Gyre Adventor,URW Gothic L,sans-serif">
             <p> ⠀⠀  </p>
-            <p>  ⠀⠀ </p>
-            <p>Enter your height in Feet/Inches and your weight in Pounds:</p>
+            <p><i><b>Enter your height and weight below:</b></i></p>
             <form method="post" action=".">
                 <p><b>Height:</b></p>
-                <p><input name="heightFt" type="number" min="0" size="6" step=".01"/> Feet</p>
-                <p><input name="heightIn" type="number" min="0" max="11" size="6" step=".01"/> Inches</p>
+                <p><input name="heightFt" type="number" min="0" size="6" step=".01" required/> Feet</p>
+                <p><input name="heightIn" type="number" min="0" max="11" size="6" step=".01" required/> Inches</p>
                 <p></p>
                 <p><b>Weight:</b></p>
-                <p><input name="weight" type="number" min="0" size="6" step=".01"/> Pounds</p>
+                <p><input name="weight" type="number" min="0" size="6" step=".01" required/> Pounds</p>
                 <p><input type="submit" value="Calculate!" /></p>
             </form>
+        </style>
         </body>
     </html>
 '''.format(errors=errors)
