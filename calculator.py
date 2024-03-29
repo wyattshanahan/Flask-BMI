@@ -30,8 +30,6 @@ def categoriseBMI(inputBMI):
         BMIcat = "Overweight"
     elif (30.0 <= inputBMI):
         BMIcat = "Obese"
-    else:
-        raise ValueError("Error calculating your BMI")
     return BMIcat
 
 #calculates the BMI
