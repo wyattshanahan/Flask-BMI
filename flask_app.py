@@ -74,4 +74,14 @@ def calculator():
 
 @app.route('/bonjour')
 def bonjour():
-    return 'Bonjour!'
+    return '''
+    <html lang="en">
+            <head>
+            <meta name="viewport" content="width=device-width">
+            <meta name="author" content="Wyatt Shanahan">
+            </head>
+            <body style="background-color:#323232;color:#f4a529">
+        <h1 style="font-family:Avantgarde,TeX Gyre Adventor,URW Gothic L,sans-serif;left:30%;position:absolute;display:inline-block;color:#f4a529;text-align:center;background-image:linear-gradient(to left,#186118,#3eb489,#186118);border-radius:25px;font-style: oblique;"> ⠀⠀ Bonjour! ⠀⠀ </h1>
+                </body>
+                </html>
+                '''
